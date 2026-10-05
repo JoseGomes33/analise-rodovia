@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Análise dos dados dos radares de controle de velocidade da BR-153 (Transbrasiliana) — ANTT" />
+    <title>Radares BR-153</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M6 22a10 10 0 0 1 20 0' fill='none' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M16 22l5-7' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="topo-int">
+        <div>
+          <p class="sobretitulo">ANTT · Radares de controle de velocidade</p>
+          <h1>BR-153 Transbrasiliana</h1>
+          <p id="resumo" class="resumo">Carregando dados…</p>
+        </div>
+        <label class="botao-arquivo">
+          <input type="file" id="arquivo" accept=".csv,text/csv" />
+          Carregar outro CSV
+        </label>
+      </div>
+      <nav class="abas" role="tablist" aria-label="Análises" id="abas"></nav>
+    </header>
+
+    <main id="conteudo">
+      <div id="estado" class="estado">
+        <div class="carregando" aria-live="polite">Carregando <code>volume-radar-trans.csv</code>…</div>
+      </div>
+    </main>
+
+    <footer class="rodape">
+      Fonte: Sistema de Informação de Rodovias — Agência Nacional de Transportes Terrestres (ANTT). Volumes agregados por equipamento, data, sentido, faixa, categoria de velocidade e tipo de veículo.
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
